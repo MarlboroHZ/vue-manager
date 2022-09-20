@@ -1,21 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import Home from '../views/Home.vue'
 
 Vue.use(VueRouter);
 
 
-const routers = [
+const routes = [
     {
         path: '/',
-        name: 's-Home',
-        component: () => import('../views/Home.vue')
+        name: 'Main' ,
+        redirect: '/home',
+        component: () => import('../views/Main.vue'),
+        children: [
+            {
+                path: '/home',
+                component: () => import('../views/home'),
+                name: 'home'
+            },
+            {
+                path: '/user',
+                name: 'user',
+                component: ()=> import('../views/user')
+            }
+        ]
     }
 ]
 
 const router = new VueRouter({
     mode: 'history',
-    routers
+    routes: routes
 })
 
 export default router

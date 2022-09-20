@@ -1,7 +1,12 @@
 <template>
   <div class="hello">
+  <router-link to="/">
     <el-button>按钮</el-button>
-    <el-button type="primary" disabled>主要按钮</el-button>
+  </router-link>
+  <router-link to="/user">
+    <el-button type="primary" plain>主要按钮</el-button>
+  </router-link>
+    
     <el-radio v-model="radio1" label="1" border>备选项1</el-radio>
   </div>
 </template>

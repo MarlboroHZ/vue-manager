@@ -1,14 +1,13 @@
 <template>
-    <div>我是home页面</div>
+    <div>我是user页面</div>
 </template>
 
 <script>
 
 export default {
-    name : 's-Home',
+    name : 'user',
     data () {
         return []
     }
-    
 }
 </script>
